@@ -52,7 +52,7 @@ export default function NavBar() {
                 <Nav.Link href="#" className="carrinho"><ShoppingCartIcon/></Nav.Link>
               </div>
               <div className="nav-link">
-                <Nav.Link href="#" className="profile"><AccountBoxIcon/></Nav.Link>
+                <Nav.Link href="/adm/dashboard" className="profile"><AccountBoxIcon/></Nav.Link>
               </div>
             </Nav>
             <Form className="d-flex">
