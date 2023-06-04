@@ -1,0 +1,22 @@
+.card{
+    width: 20%;
+    margin: 40px;
+    display: block;
+    @media (max-width: 768px) {
+        width: auto !important;
+    }
+    text-align: center;
+}
+
+.card1 {
+    background-color: orange;
+
+  }
+
+  .card2 {
+    background-color: darkviolet;
+  }
+
+  .card3 {
+    background-color:crimson;
+  }

@@ -8,10 +8,10 @@ import {
 import { Home, Estante, HomeDashboard } from "../pages";
 import Loading from "../components/Loading";
 import Auth from "../pages/Auth/Auth";
+import { AddBook, Estoque } from "../pages/Dashboard";
 
 const MyRoutes = () => {
   return (
-    <Suspense fallback={<Loading />}>
       <Router>
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -19,9 +19,11 @@ const MyRoutes = () => {
           <Route path="/estante" element={<Estante />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/adm/dashboard" element={<HomeDashboard />} />
+          <Route path="/adm/estoque" element={<Estoque />} />
+          <Route path="/adm/estoque/newbook" element={<AddBook />} />
+          
         </Routes>
       </Router>
-    </Suspense>
   );
 };
 

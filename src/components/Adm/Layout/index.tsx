@@ -1,60 +1,43 @@
-import React, { useState } from 'react';
+import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
+import Sidebar from '../Sidebar';
+import { colors } from '../../../styles/global';
+
+export interface ILayout extends HTMLProps<HTMLElement> {
+  children: React.ReactNode;
+}
 
 const Container = styled.div`
   display: flex;
-  height: 100vh;
+  background-color: ${colors.secondary};
+  width: 100%;
 `;
 
-const Menu = styled.nav`
-  flex: 0 0 200px;
-  background-color: #333;
-  color: #fff;
+const ContentContainer = styled.div`
+  display: flex; /* Adicionado */
+  width: 100%;
 `;
 
-const Section = styled.div`
+const SidebarContainer = styled.div`
+  width: 200px; /* Defina a largura do menu aqui */
+`;
+
+const Content = styled.div`
+  min-height: 100vh;
   flex: 1;
-  padding: 20px;
 `;
 
-const MenuItem = styled.a`
-  display: block;
-  padding: 10px;
-  color: inherit;
-  text-decoration: none;
-  &:hover {
-    background-color: #555;
-  }
-`;
-
-type MenuItemType = {
-  title: string;
-  content: React.ReactNode;
-};
-
-const Dashboard: React.FC<{ menuItems: MenuItemType[] }> = ({ menuItems }) => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-
-  const handleMenuItemClick = (index: number) => {
-    setActiveItemIndex(index);
-  };
-
+const Layout = ({ children }: ILayout) => {
   return (
     <Container>
-      <Menu>
-        {menuItems.map((item, index) => (
-          <MenuItem
-            key={index}
-            onClick={() => handleMenuItemClick(index)}
-            style={activeItemIndex === index ? { backgroundColor: '#555' } : {}}
-          >
-            {item.title}
-          </MenuItem>
-        ))}
-      </Menu>
-      <Section>{menuItems[activeItemIndex].content}</Section>
+      <ContentContainer>
+        <SidebarContainer>
+          <Sidebar />
+        </SidebarContainer>
+        <Content>{children}</Content>
+      </ContentContainer>
     </Container>
   );
-};
+}
 
-export default Dashboard;
+export default Layout;

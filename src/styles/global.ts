@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export const colors = {
   primary: "#0d0d0d",
+  secondary:"#25423f",
   lightgreen: "#8AA6A3",
   yellow: "#ffa500",
   success: "#50ba9e",
@@ -18,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body, #root {
     height: 100%;
-    background-color: #25423f;
+    background-color: ${colors.secondary};
     transition-duration: 3s; 
     color: #000;
     a{
@@ -63,5 +64,10 @@ export const GlobalStyle = createGlobalStyle`
 
     color: ${colors.blackText};
   }
-
+  .btnYellow{
+    background-color: orange !important;
+    color: #995e2b !important;
+    font-weight: bold !important;
+    border: none;
+  }
 `;

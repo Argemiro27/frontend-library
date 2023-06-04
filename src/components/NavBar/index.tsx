@@ -15,7 +15,7 @@ export default function NavBar() {
     <S.Nav>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/home">
             <S.Logo />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
