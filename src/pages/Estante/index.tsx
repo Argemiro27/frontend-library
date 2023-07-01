@@ -59,13 +59,11 @@ const Estante: React.FC = () => {
       <NavBar />
       <Section>
         <Wrapper>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
             <div style={{ width: "20%", marginRight: "2rem" }}>
               <h1>Estante</h1>
               <p>
-                Aqui você confere os melhores livros pelos melhores preços do
-                mercado! Não deixe de usar os filtros para pesquisar pelo que
-                você precisa ou procurar pelas melhores opções pra você!
+                Aqui você confere os melhores livros pelos melhores preços do mercado! Não deixe de usar os filtros para pesquisar pelo que você precisa ou procurar pelas melhores opções pra você!
               </p>
               <h4 className="subtitle mb-3 mt-3">Filtros</h4>
               <input
@@ -75,41 +73,41 @@ const Estante: React.FC = () => {
                 aria-label="Search"
                 onChange={(e) => setFilter(e.target.value)}
               />
-
-<h4 className="subtitle mb-3 mt-3">Carrinho de Compras</h4>
-{cart.length === 0 ? (
-  <p>O carrinho está vazio.</p>
-) : (
-  <ul>
-    {cart.map((book) => (
-      <li key={book.id}>
-        <Button
-          variant="contained"
-          color="error"
-          style={{ marginRight: '0.5rem' }}
-          startIcon={<Delete style={{ marginLeft: '0.5rem' }} />}
-          onClick={() => removeFromCart(book)}
-        />
-        <span>{book.titulo}</span>
-      </li>
-    ))}
-  </ul>
-)}
-
-
+  
+              <h4 className="subtitle mb-3 mt-3">Carrinho de Compras</h4>
+              {cart.length === 0 ? (
+                <p>O carrinho está vazio.</p>
+              ) : (
+                <ul>
+                  {cart.map((book) => (
+                    <li key={book.id}>
+                      <Button
+                        variant="contained"
+                        color="error"
+                        style={{ marginRight: '0.5rem' }}
+                        startIcon={<Delete style={{ marginLeft: '0.5rem' }} />}
+                        onClick={() => removeFromCart(book)}
+                      />
+                      <span>{book.titulo}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+  
               <Button
                 variant="contained"
                 color="primary"
                 onClick={handleOpenModal}
+                style={{ marginTop: '1rem' }}
               >Finalizar Compra</Button>
-
+  
               <FinalizarCompra open={openModal} onClose={handleCloseModal} books={cart} />
-
+  
             </div>
-
-            <BookList style={{ width: "80%" }}>
+  
+            <BookList style={{ width: "80%", display: "flex", flexWrap: "wrap", gap: "1rem" }}>
               {filteredBooks.map((book, index) => (
-                <BookItem key={index}>
+                <BookItem key={index} style={{ width: "calc(33.33% - 1rem)" }}>
                   <div>
                     <Button
                       variant="contained"
@@ -130,7 +128,7 @@ const Estante: React.FC = () => {
         </Wrapper>
       </Section>
     </>
-  );
+  );  
 }
 
 export default Estante;
