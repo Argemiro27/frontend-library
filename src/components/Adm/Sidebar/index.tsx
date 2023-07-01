@@ -14,8 +14,8 @@ interface MenuItem {
 }
 
 const Sidebar: React.FC = () => {
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([
-    { title: 'Painel', icon: <DashboardIcon />, path: '/adm/dashboard' },
+  const [menuItems] = useState<MenuItem[]>([
+    { title: 'Painel', icon: <DashboardIcon />, path: '/adm/painel' },
     { title: 'Estoque', icon: <ShoppingCartIcon />, path: '/adm/estoque' },
     { title: 'Vendas', icon: <MonetizationOnIcon />, path: '/vendas' },
     { title: 'Configurações', icon: <SettingsIcon />, path: '/settings' },

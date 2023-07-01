@@ -18,6 +18,10 @@
     "@types/react-dom": "^18.2.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "jsonwebtoken": "^9.0.0",
+    "jwt-decode": "^3.1.2",
     "mdb-react-ui-kit": "^6.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -58,7 +62,10 @@
   "devDependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@types/js-cookie": "^3.0.3",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/react-lottie": "^1.2.6",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "js-cookie": "^3.0.5"
   }
 }

@@ -1,0 +1,12 @@
+.card-auth{
+    background-color: #1f1e1c !important;
+    color: #adadad !important;
+    width: auto;
+    box-shadow: 1px 2px 13px black;
+}
+
+.input{
+    background-color: #1f1e1c !important;
+    border-color: #0e0e0e !important;
+    color: grey !important;
+}

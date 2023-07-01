@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export const colors = {
   primary: "#0d0d0d",
-  secondary:"#25423f",
+  secondary: "#b5b5b5",
   lightgreen: "#8AA6A3",
   yellow: "#ffa500",
   success: "#50ba9e",
@@ -16,12 +16,11 @@ export const colors = {
 };
 
 export const GlobalStyle = createGlobalStyle`
-
   html, body, #root {
     height: 100%;
     background-color: ${colors.secondary};
-    transition-duration: 3s; 
     color: #000;
+    font-family: 'Titillium Web', sans-serif;
     a{
         color: white;
     }
@@ -33,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quantico', sans-serif;
     ::-webkit-scrollbar {
         background-color: ${colors.black};
         width: 8px;
@@ -70,4 +68,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: bold !important;
     border: none;
   }
+  ul,
+ol {
+  list-style-type: none;
+}
 `;

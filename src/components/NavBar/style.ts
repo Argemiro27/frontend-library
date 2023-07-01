@@ -13,7 +13,11 @@ export const Nav = styled.div`
   font-size: 13px;
   text-transform: uppercase;
   border-top: 2px solid #10403B;
+  font-family: 'Quantico', sans-serif;
   div {
     background-color: ${colors.primary};
+  }
+  .nome{
+    color: #fff;
   }
 `;

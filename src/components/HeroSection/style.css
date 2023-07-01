@@ -1,0 +1,4 @@
+.container-test{
+    background-image: url("/src/assets/images/homeBg.jpg");
+    background-size: cover;
+}

@@ -5,7 +5,7 @@ export const SectionContainer = styled.div`
   flex-wrap: wrap;
   position: relative;
   background-size: cover;
-  height: 100vh;
+  height: cover;
   width: 100%;
   align-items: center;
   flex-direction: column;
